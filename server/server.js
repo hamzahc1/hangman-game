@@ -4,7 +4,6 @@ var express = require('express');
 var parser = require('body-parser');
 var mongoose = require('mongoose');
 var morgan = require('morgan');
-var cookieParser = require('cookie-parser');
 
 var app = express();
 var http = require('http').Server(app);
@@ -15,7 +14,6 @@ var db = require('./db/gameSchema');
 app.use(morgan('dev'));
 app.use(parser.json());
 app.use(parser.urlencoded({ extended: true }));
-app.use(cookieParser());
 
 app.use(express.static(__dirname + '/../client'));
 app.use('/', router);
