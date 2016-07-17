@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  
+  <body ng-app="hangman">
+    <h1>Hangman!</h1>
+
+    <a href='#/playHangman'><button class="btn btn-primary btn-large">Play Hangman!</button></a>
+    <a href='#/managementPage'><button class="btn btn-primary btn-large">Game Management</button></a>
+    <div ng-view></div>
+    <script src= 'app.js'></script>
+    <script src='/gamePlay/game.js'></script>
+    <script src='/managementPage/management.js'></script>
+    <script src='services.js'></script>
+  </body>
+</html>

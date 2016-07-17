@@ -1,0 +1,31 @@
+  <div>
+    <h1>Hangman Game</h1>
+    <div class="container">
+      <div class="well">
+        <div class="secretWord">
+          <ul class="list-inline">
+            <li ng-repeat="letter in gameState.secretWord">
+              <span ng-hide="letter.chosen">_</span>
+              <span ng-show="letter.chosen">{{ letter.name }}</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="letters" ng-hide="gameState.win || gameState.lost">
+          <ul class="list-inline">
+            <li ng-repeat="letter in gameState.letters">
+              <button class="btn-primary letter-button" ng-disabled="letter.chosen" ng-click="try(letter);">{{letter.name}}</button>
+            </li>
+          </ul>
+        </div>
+        
+        <p>
+          <span ng-hide="gameState.win || gameState.lost">You have {{ gameState.missesAllowed }} guesses remaining.</span>
+          <span ng-show="gameState.win">Well done!</span>
+          <span ng-show="gameState.lost">Sorry, please try again!.</span>
+        </p>        
+      </div>
+      
+    <button ng-click="reset()" class="btn btn-primary btn-large">New Game</button>
+  </div>
+</div>

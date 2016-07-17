@@ -1,0 +1,36 @@
+<h2>Management Page</h2>
+<div>
+<button ng-click ='getAllGameStates()' class="btn btn-info btn-large">Refresh</button>
+<table class ="table">
+  <thead>
+    <tr>
+      <th>Secret Word</th>
+      <th>Current State</th>
+      <th>Lives Left</th>
+      <th>Guesses</th>
+      <th>Game State</th>
+      <th>Last move made</th>
+      <th>Game started</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr ng-repeat="game in allGames">
+    <td class ='tableContent'>{{ game.fullWord }}</td>
+    <td class ='tableContent'>
+        <ul class="list-inline tableContent">
+          <li ng-repeat="letter in game.secretWord">
+            <span  ng-hide="letter.chosen">_</span>
+            <span  ng-show="letter.chosen">{{ letter.name }}</span>
+          </li>
+        </ul>
+    </td>
+    <td class ='tableContent'>{{ game.missesAllowed }}</td>
+    <td class ='tableContent'>{{ game.guesses }}</td>
+    <td class ='tableContent'>{{ game.state }}</td>
+    <td class ='tableContent'>{{ game.updatedAt | date : 'medium' : 'GMT' }}</td>
+    <td class ='tableContent'>{{ game.createdAt | date : 'medium' : 'GMT' }}</td>
+  </tr>
+  </tbody>
+</table>
+
+</div>
