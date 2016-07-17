@@ -5,9 +5,11 @@ A Hangman game  built in AngularJS with Node and MongoDB on the back-end.
 <img src = 'https://github.com/hamzahc1/hangman-game/blob/master/HangmanDemo.gif'>
 
 <br>
-##Screenshot
+##Screenshots
 
-<!--<img src = 'https://github.com/hamzahc1/wallet/blob/master/walletscreenshot.png'>-->
+<img src = 'https://github.com/hamzahc1/hangman-game/blob/master/gamePlay.png'>
+<br>
+<img src = 'https://github.com/hamzahc1/hangman-game/blob/master/management.png'>
 
 <br>
 -Database in MongoDB running with Mongoose ORM
