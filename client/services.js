@@ -1,6 +1,7 @@
 angular.module('hangman.services', [])
   
   .factory('gameFactory', function($http){
+    //Gets the state of specific game
     var getGame = function(gameID) {
       return $http({
         method: 'GET',
@@ -10,7 +11,7 @@ angular.module('hangman.services', [])
         return resp;
       });
     };
-
+    //Sends the state of brand new game 
     var sendGame = function(gameObj) {
       return $http({
         method: 'POST',
@@ -23,7 +24,7 @@ angular.module('hangman.services', [])
         console.error("Error sending game state")
       })
       };
-
+      //Updates the state of current game
     var updateGame = function(gameObj, gameID) {
       return $http({
         method: 'PUT',
@@ -36,14 +37,13 @@ angular.module('hangman.services', [])
          console.error("Error updating game state")
        })
        };
-
+       //Gets the state of all games in the database
     var getAllGames = function() {
       return $http({
         method: 'GET',
         url: '/getGameStates'
       })
       .then(function(resp) {
-        console.log(resp.data);
         return resp.data;
       })
     }
