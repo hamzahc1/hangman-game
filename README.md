@@ -2,7 +2,7 @@
 
 A Hangman game  built in AngularJS with Node and MongoDB on the back-end.
 
-<!--<img src = 'https://github.com/hamzahc1/wallet/blob/master/Wallet.gif'>-->
+<img src = 'https://github.com/hamzahc1/hangman-game/blob/master/HangmanDemo.gif'>
 
 <br>
 ##Screenshot
